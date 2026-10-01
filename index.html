@@ -1,115 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mazharul Islam - Personal Website">
-  <title>Mazharul Islam | Personal Website</title>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#17202a;background:#f6f8fb}
-    nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
-        border-bottom:1px solid #e7eaf0;padding:14px 6%}
-    nav .inner{max-width:1050px;margin:auto;display:flex;justify-content:space-between;align-items:center}
-    .logo{font-weight:800;font-size:20px;text-decoration:none;color:#17202a}
-    nav a{color:#344054;text-decoration:none;margin-left:22px;font-size:14px}
-    nav a:hover{color:#1264a3}
-    .hero{min-height:100vh;display:flex;align-items:center;padding:110px 6% 60px;
-          background:linear-gradient(135deg,#eef7ff,#ffffff 55%,#eefbf5)}
-    .hero-inner{max-width:1050px;margin:auto;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
-    .tag{display:inline-block;padding:7px 13px;border-radius:30px;background:#e3f2fd;color:#1264a3;font-size:13px;font-weight:700;margin-bottom:18px}
-    h1{font-size:clamp(42px,7vw,72px);line-height:1.05;margin-bottom:18px}
-    h1 span{color:#1264a3}
-    .hero p{font-size:18px;color:#667085;max-width:600px}
-    .buttons{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px}
-    .primary{background:#1264a3;color:#fff}.secondary{background:#fff;color:#344054;border:1px solid #d9dee7}
-    .photo-wrap{display:flex;justify-content:center}
-    .photo{width:min(390px,85vw);aspect-ratio:4/5;object-fit:cover;border-radius:28px;
-           box-shadow:0 25px 60px rgba(16,24,40,.18);border:8px solid #fff}
-    section{padding:85px 6%}
-    .section-inner{max-width:1050px;margin:auto}
-    .section-title{font-size:34px;margin-bottom:12px}
-    .muted{color:#667085}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-    .card{background:#fff;border:1px solid #e7eaf0;border-radius:18px;padding:25px;box-shadow:0 8px 25px rgba(16,24,40,.05)}
-    .card h3{margin-bottom:8px}
-    .contact{background:#17202a;color:#fff}
-    .contact .muted{color:#c5ced8}
-    footer{text-align:center;padding:25px;background:#10161d;color:#aeb7c2;font-size:13px}
-    @media(max-width:800px){
-      nav .links{display:none}
-      .hero-inner{grid-template-columns:1fr;text-align:center}
-      .hero p{margin:auto}
-      .buttons{justify-content:center}
-      .cards{grid-template-columns:1fr}
-      .photo-wrap{order:-1}
-      .photo{width:min(300px,80vw)}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mazharul Islam | Personal Website</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#18212b;background:linear-gradient(135deg,#f7fbff,#eef8f5);line-height:1.7}
+a{text-decoration:none;color:inherit}.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);border-bottom:1px solid #e8edf2}
+.nav-inner{max-width:1050px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:800;letter-spacing:1px}.menu{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;font-weight:600}
+.menu a:hover{color:#1671b8}.hero{max-width:1050px;margin:auto;padding:65px 22px 55px;display:grid;grid-template-columns:1fr 1.25fr;gap:45px;align-items:center}
+.photo-wrap{text-align:center}.photo{width:min(360px,90%);aspect-ratio:1/1;object-fit:cover;border-radius:32px;border:10px solid white;box-shadow:0 20px 45px rgba(40,70,100,.16)}
+.badge{display:inline-block;background:#e3f3ff;color:#176fae;padding:7px 18px;border-radius:30px;font-weight:700;font-size:14px;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,68px);line-height:1.05;margin-bottom:18px}h1 span{color:#1675b9}.lead{font-size:18px;color:#596979;max-width:680px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;padding:12px 21px;border-radius:12px;font-weight:700;border:1px solid #dbe5ec;background:white}.btn.primary{background:#1675b9;color:white;border-color:#1675b9}
+section{max-width:1050px;margin:auto;padding:38px 22px}.section-title{font-size:30px;margin-bottom:22px}.section-title span{color:#1675b9}
+.card{background:white;border-radius:20px;padding:25px;box-shadow:0 10px 30px rgba(35,55,75,.07);border:1px solid #edf1f4}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.edu h3,.skill h3{margin-bottom:8px;color:#176fae}.edu{min-height:190px}.edu p,.skill p{color:#5c6875}
+.timeline{display:grid;gap:16px}.timeline-item{border-left:4px solid #1675b9;padding-left:18px}.timeline-item h3{margin-bottom:5px}.muted{color:#6b7785}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.tag{padding:8px 13px;background:#edf7fd;border-radius:999px;color:#176fae;font-weight:600}
+.contact{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.contact-box{background:white;padding:20px;border-radius:16px;border:1px solid #edf1f4}
+footer{text-align:center;padding:30px 20px;margin-top:30px;color:#74808b}
+@media(max-width:760px){.menu{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:38px}.lead{margin:auto}.buttons{justify-content:center}.grid,.contact{grid-template-columns:1fr}section{padding-top:28px}}
+</style>
 </head>
 <body>
-<nav>
-  <div class="inner">
-    <a class="logo" href="#home">MI1998</a>
-    <div class="links">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#career">Career</a><a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
+<nav class="nav"><div class="nav-inner"><div class="logo">MI1998</div><div class="menu">
+<a href="#about">About</a><a href="#career">Career</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</div></div></nav>
 
-<header class="hero" id="home">
-  <div class="hero-inner">
-    <div>
-      <div class="tag">PERSONAL WEBSITE</div>
-      <h1>Hello, I'm <span>Mazharul Islam</span></h1>
-      <p>Welcome to my personal space on the web. Here I can share my profile, career journey, interests and contact information.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#about">About Me</a>
-        <a class="btn secondary" href="#contact">Contact</a>
-      </div>
-    </div>
-    <div class="photo-wrap">
-      <img class="photo" src="profile.png" alt="Mazharul Islam">
-    </div>
-  </div>
-</header>
+<header class="hero">
+<div class="photo-wrap"><img class="photo" src="profile.png" alt="Mazharul Islam"></div>
+<div><div class="badge">PERSONAL WEBSITE</div>
+<h1>Hello, I'm <span>Mazharul Islam</span></h1>
+<p class="lead">Welcome to my personal space on the web. Here I share my professional profile, education, career journey, skills and interests.</p>
+<div class="buttons"><a class="btn primary" href="#about">About Me</a><a class="btn" href="#contact">Contact</a><a class="btn" href="CV.pdf" target="_blank">Download CV</a></div>
+</div></header>
 
-<section id="about">
-  <div class="section-inner">
-    <h2 class="section-title">About Me</h2>
-    <p class="muted">A simple introduction section for my personal website. This text can be replaced with my own biography, education, hobbies and other information.</p>
-    <div class="cards">
-      <div class="card"><h3>Profile</h3><p>Personal information, interests and a short biography.</p></div>
-      <div class="card"><h3>Education</h3><p>Add educational qualifications, courses and achievements here.</p></div>
-      <div class="card"><h3>Interests</h3><p>Add hobbies, travel, photography, writing or other interests here.</p></div>
-    </div>
-  </div>
-</section>
+<section id="about"><h2 class="section-title">About <span>Me</span></h2><div class="card">
+<p>I am Mazharul Islam, a dedicated and responsible professional with an academic background in Management. I am currently working as a <strong>Branch Accounts Officer at BRAC</strong>. I am interested in accounting, finance, technology and continuous learning.</p><br>
+<p>I consider myself sincere, punctual and dutiful. I enjoy working in challenging environments, communicating with people and achieving professional goals through continuous improvement.</p>
+</div></section>
 
-<section id="career" style="background:#fff">
-  <div class="section-inner">
-    <h2 class="section-title">Career</h2>
-    <p class="muted">Professional information can be added here, including current position, experience, skills and achievements.</p>
-    <div class="cards">
-      <div class="card"><h3>Current Role</h3><p>Branch Accounts Officer</p></div>
-      <div class="card"><h3>Skills</h3><p>Accounting, finance, office applications and professional communication.</p></div>
-      <div class="card"><h3>Experience</h3><p>Add previous roles, responsibilities and notable achievements here.</p></div>
-    </div>
-  </div>
-</section>
+<section id="career"><h2 class="section-title">Career <span>Profile</span></h2><div class="card timeline">
+<div class="timeline-item"><h3>Branch Accounts Officer — BRAC</h3><p class="muted">Current Position</p><p>Responsible for branch-level accounting and financial activities, maintaining records, supporting financial reporting and performing assigned accounts-related responsibilities.</p></div>
+</div></section>
 
-<section class="contact" id="contact">
-  <div class="section-inner">
-    <h2 class="section-title">Contact</h2>
-    <p class="muted">Your email, phone number and social links can be added here.</p>
-    <div class="buttons">
-      <a class="btn primary" href="mailto:your@email.com">Email Me</a>
-    </div>
-  </div>
-</section>
+<section id="education"><h2 class="section-title">Educational <span>Background</span></h2><div class="grid">
+<div class="card edu"><h3>MBA in Management</h3><p><strong>University:</strong> National University</p><p><strong>Institute:</strong> Ananda Mohan College, Mymensingh</p><p><strong>Passing Year:</strong> 2022</p><p><strong>Result:</strong> 2.81 / 4.00</p></div>
+<div class="card edu"><h3>BBA (Honours) in Management</h3><p><strong>University:</strong> National University</p><p><strong>Institute:</strong> Netrokona Govt. College</p><p><strong>Passing Year:</strong> 2021</p><p><strong>Result:</strong> 2.98 / 4.00</p></div>
+<div class="card edu"><h3>Higher Secondary Certificate (HSC)</h3><p><strong>Board:</strong> Dhaka</p><p><strong>Institute:</strong> Netrokona Govt. College</p><p><strong>Group:</strong> Science</p><p><strong>Passing Year:</strong> 2016</p><p><strong>Result:</strong> 4.08 / 5.00</p></div>
+<div class="card edu"><h3>Secondary School Certificate (SSC)</h3><p><strong>Board:</strong> Dhaka</p><p><strong>Institute:</strong> Dakshin Bishiuṛa High School</p><p><strong>Group:</strong> Science</p><p><strong>Passing Year:</strong> 2014</p><p><strong>Result:</strong> 5.00 / 5.00</p></div>
+</div></section>
 
-<footer>© 2026 Mazharul Islam. Personal Website.</footer>
-</body>
-</html>
+<section id="skills"><h2 class="section-title">Skills & <span>Interests</span></h2><div class="grid">
+<div class="card skill"><h3>Computer Skills</h3><div class="skills"><span class="tag">MS Word</span><span class="tag">MS Excel</span><span class="tag">PowerPoint</span><span class="tag">MS Access</span><span class="tag">Internet</span><span class="tag">Email</span></div></div>
+<div class="card skill"><h3>Personal Strengths</h3><div class="skills"><span class="tag">Sincere</span><span class="tag">Punctual</span><span class="tag">Responsible</span><span class="tag">Target-oriented</span><span class="tag">Teamwork</span><span class="tag">Communication</span></div></div>
+<div class="card skill"><h3>Language</h3><p>Bangla — Fluent</p><p>English — Good communication skills</p></div>
+<div class="card skill"><h3>Interests</h3><p>Travelling, reading newspapers, playing games and learning new things.</p></div>
+</div></section>
+
+<section id="contact"><h2 class="section-title">Contact <span>Me</span></h2><div class="contact">
+<div class="contact-box"><strong>📧 Email</strong><p><a href="mailto:mazharulislam56948@gmail.com">mazharulislam56948@gmail.com</a></p></div>
+<div class="contact-box"><strong>📱 Mobile</strong><p><a href="tel:+8801540348368">+880 1540348368</a></p></div>
+</div></section>
+
+<footer>© 2026 Mazharul Islam · MI1998 · Personal Website</footer>
+</body></html>
